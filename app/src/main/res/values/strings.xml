@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Asclepius</string>
+    <string name="camera_x">CameraX</string>
+    <string name="camera">Kamera</string>
+    <string name="gallery">Galeri</string>
+    <string name="analyze">Analyze</string>
+    <string name="result">Hasil Analisis</string>
+    <string name="image">Gambar</string>
+    <string name="news">Berita Kanker</string>
+    <string name="result_desc">Deskripsi Analisis</string>
+    <string name="empty_image">Pilih berkas gambar dahulu</string>
+    <string name="savemark">Savemark</string>
+</resources>

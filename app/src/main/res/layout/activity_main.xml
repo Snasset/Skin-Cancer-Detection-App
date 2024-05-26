@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="?attr/colorPrimary"
+            app:title="@string/app_name"
+            app:titleTextColor="?attr/colorOnPrimary" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+    <ImageView
+        android:id="@+id/previewImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/image"
+        android:background="@color/md_theme_light_secondaryContainer"
+        app:layout_constraintBottom_toTopOf="@+id/cameraButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        app:srcCompat="@drawable/ic_place_holder" />
+
+
+    <ImageButton
+        android:id="@+id/galleryButton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/btn_round"
+        android:src="@drawable/ic_gallery"
+        android:contentDescription="@string/gallery"
+        app:layout_constraintBottom_toTopOf="@+id/tv_gallery"
+        app:layout_constraintStart_toStartOf="@+id/newsButton"
+        app:layout_constraintTop_toTopOf="@+id/cameraButton" />
+
+    <ImageButton
+        android:id="@+id/cameraButton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/btn_round"
+        android:src="@drawable/ic_camera"
+        android:contentDescription="@string/camera"
+        app:layout_constraintBottom_toTopOf="@+id/tv_camera"
+        app:layout_constraintEnd_toEndOf="@+id/savemarkButton" />
+
+    <TextView
+        android:id="@+id/tv_camera"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="@string/camera"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/savemarkButton"
+        app:layout_constraintEnd_toEndOf="@+id/cameraButton"
+        app:layout_constraintStart_toStartOf="@+id/cameraButton" />
+
+    <TextView
+        android:id="@+id/tv_gallery"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="@string/gallery"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/newsButton"
+        app:layout_constraintEnd_toEndOf="@+id/galleryButton"
+        app:layout_constraintStart_toStartOf="@+id/galleryButton" />
+
+
+    <ImageButton
+        android:id="@+id/newsButton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="24dp"
+        android:background="@drawable/btn_round"
+        android:src="@drawable/ic_news"
+        android:contentDescription="@string/news"
+        app:layout_constraintBottom_toTopOf="@+id/tv_news"
+        app:layout_constraintStart_toStartOf="@+id/analyzeButton" />
+
+    <ImageButton
+        android:id="@+id/savemarkButton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/btn_round"
+        android:src="@drawable/ic_bookmark_border"
+        android:contentDescription="@string/savemark"
+        app:layout_constraintBottom_toBottomOf="@+id/newsButton"
+        app:layout_constraintEnd_toEndOf="@+id/analyzeButton"
+        app:layout_constraintTop_toTopOf="@+id/newsButton" />
+
+    <TextView
+        android:id="@+id/tv_news"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/news"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/analyzeButton"
+        app:layout_constraintEnd_toEndOf="@+id/newsButton"
+        app:layout_constraintStart_toStartOf="@+id/newsButton" />
+
+    <TextView
+        android:id="@+id/tv_savemark"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/savemark"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_news"
+        app:layout_constraintEnd_toEndOf="@+id/savemarkButton"
+        app:layout_constraintStart_toStartOf="@+id/savemarkButton"
+        app:layout_constraintTop_toBottomOf="@+id/savemarkButton" />
+
+    <Button
+        android:id="@+id/analyzeButton"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/analyze"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
