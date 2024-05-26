@@ -1,1 +1,1 @@
-"# Skin-Cancer-Detection-App" 
+Used mobilenet_v1 as the AI model
